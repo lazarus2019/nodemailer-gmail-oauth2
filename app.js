@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const { engine } = require("express-handlebars");
 const path = require("path");
+const sendMailRoute = require("./routes/mail");
 
 const app = express();
 
@@ -16,10 +17,13 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 
 // parse application/json
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
   res.render("contact");
 });
+
+app.use("/", sendMailRoute);
 
 const _PORT = PORT || 5000;
 

@@ -1,0 +1,23 @@
+{
+  "name": "nodemailer-oauth-gg",
+  "version": "1.0.0",
+  "description": "Simple nodemailer using google api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "googleapis": "^108.0.0",
+    "nodemailer": "^6.8.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
